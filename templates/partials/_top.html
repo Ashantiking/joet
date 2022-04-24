@@ -1,0 +1,60 @@
+<header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6">
+            <div class="header__top__left">
+              <div class="text-slid-box">
+                <div id="offer-box" class="carouselTicker">
+                    <ul class="offer-box">
+                        <li>
+                            <i class="fab fa-opencart"></i> 20% Free Delivery within Abuja
+                        </li>
+                        <li>
+                            <i class="fab fa-opencart"></i> 100% Pay on Delivery
+                        </li>
+                        <li>
+                            <i class="fab fa-opencart"></i> 24/7 Service
+                        </li>
+                        
+                        <li>
+                            <i class="fab fa-opencart"></i>Always Quality Products 
+                        </li>
+                        <li>
+                            <i class="fab fa-opencart"></i> Shop with us Today 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6">
+            <div class="header__top__right">
+              <div class="header__top__right__social">
+                <a href="https://web.facebook.com/Jeothery-International-Ltd-103239072362654/"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </div>
+              <div class="header__top__right__language">
+                <img src="img/language.png" alt="" />
+                <div>English</div>
+                <span class="arrow_carrot-down"></span>
+                <ul>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </div>
+              <div class="header__top__right__auth">
+                {% if request.user.is_authenticated %}
+                <a href="{% url 'logout' %}"><img src="{{ profile.photo.avatar.url }}"
+                  class="img-radius"
+                  alt=""
+                />{{user.first_name}}</a>
+                {% else %}
+                <a href="{% url 'login' %}"><i class="fa fa-user"></i> Login</a>
+               {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

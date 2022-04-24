@@ -1,0 +1,81 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+
+{{ post.title }} SignUp.
+		{% endblock  %}
+
+
+		{% block content%}
+
+    <!-- Start All Title Box -->
+    <div class="latest-blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
+           
+
+            <div class="latest-blog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="title-all ">
+                                <div class="blog-box text-center p-5">
+                                    <div class="col-md-12 col-lg-12 col-xl-12 mx-auto">
+                                        <div class="title-all text-center">
+                                            <h1>Registation<img  height="100" src="{% static 'img/logo.png' %}" alt=""></h1>
+                                            <p>You can create an Acount Here</p>
+                                        </div>
+                                        <div class="from-group">
+                                            <form method="POST">
+                                                {% csrf_token %}
+                                                {{ form.as_p }}
+                                                <button class="btn btn-outline-primary">Register</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="btn-ber text-center">
+                                        <p class="text-center"> Already have an account
+                                        <a class=" text-primary" href="{% url 'login' %}">Login Here</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+                
+            </div>
+        </div>
+    </div>
+    <!-- End Blog  -->
+    <!-- End All Title Box -->
+
+
+	
+  
+	
+
+	
+{% endblock %}
